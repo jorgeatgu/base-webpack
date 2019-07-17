@@ -1,0 +1,47 @@
+{
+  "name": "base-webpack",
+  "version": "1.0.0",
+  "description": "Base for any project of Jorge Aznar, {civic/data/designer} based on Zaragoza ⦉ http://jorgeatgu.com ⦊",
+  "main": "index.js",
+  "lint-staged": {
+    "src/css/*.css": "stylelint",
+    "src/js/*.js": "eslint --fix"
+  },
+  "pre-commit": "lint-staged",
+  "scripts": {
+    "build": "webpack -p --config ./webpack/webpack.config.js --display-error-details",
+    "watch": "webpack-dev-server --watch --open --config ./webpack/webpack.config.js --display-error-details",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.0.1",
+    "eslint-loader": "^2.2.1",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss": "^7.0.17",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-custom-selectors": "^5.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.2",
+    "postcss-normalize": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
