@@ -5,17 +5,17 @@ Base is inspired by this [article](https://medium.com/@jontorrado/working-with-w
 [BASE GULP](https://github.com/jorgeatgu/base)   
 [BASE D3](https://github.com/jorgeatgu/base-d3)   
 
-CSS: PostCSS {
-    custom-properties,
-    custom-selector,
-    nested,
-    normalize,
-    preset-env
-} 
-Javascript: Babel 
-Linters: 
-    JavaScript: Eslint + Prettier | fix errors with lint-staged
-    CSS: Stylelint
-Minify: 
-    Javascript: Terser
-    CSS: css nano
+CSS: PostCSS {   
+    custom-properties,   
+    custom-selector,   
+    nested,   
+    normalize,   
+    preset-env   
+}   
+Javascript: Babel   
+Linters:    
+    JavaScript: Eslint + Prettier | fix errors with lint-staged   
+    CSS: Stylelint   
+Minify:    
+    Javascript: Terser   
+    CSS: css nano   
