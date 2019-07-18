@@ -1,6 +1,6 @@
 # Base Webpack
 
-Base is inspired by this [article](https://medium.com/@jontorrado/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2) written by [Jon Torrado](https://twitter.com/jontorrado).
+Base is inspired by this [article](https://medium.com/@jontorrado/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2), written by [Jon Torrado](https://twitter.com/jontorrado).
 
 **CSS**
   * PostCSS
@@ -10,18 +10,19 @@ Base is inspired by this [article](https://medium.com/@jontorrado/working-with-w
     * normalize,   
     * preset-env   
         
-**Javascript**: Babel   
+**Javascript** 
+  * Babel
 
-**Linters**:    
+**Linters**   
   * JavaScript: Eslint + Prettier | fix errors with lint-staged   
   * CSS: Stylelint   
     
-**Minify**:    
+**Minify**  
   * Javascript: Terser   
   * CSS: css nano   
 
 
-Another configurations
+### Another configurations
 
-[Base Gulp](https://github.com/jorgeatgu/base)   
+[Base Gulp4](https://github.com/jorgeatgu/base)   
 [Base d3](https://github.com/jorgeatgu/base-d3)   
