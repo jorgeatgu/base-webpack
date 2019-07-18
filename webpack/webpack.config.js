@@ -21,5 +21,9 @@ module.exports = {
         compress: true,
         open: true,
         port: 9000
+    },
+    optimization: {
+        minimizer: [plugins.TerserPlugin],
+        minimize: true
     }
 };

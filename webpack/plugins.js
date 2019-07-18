@@ -2,6 +2,7 @@ const path = require('path');
 const _MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const _StyleLintPlugin = require('stylelint-webpack-plugin');
 const _HtmlPlugin = require('html-webpack-plugin');
+const _TerserPlugin = require('terser-webpack-plugin');
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
     filename: 'css/[name].bundle.css',
@@ -22,8 +23,11 @@ const HtmlPlugin = new _HtmlPlugin({
     filename: path.resolve(__dirname, '../public', 'index.html')
 });
 
+const TerserPlugin = new _TerserPlugin({});
+
 module.exports = {
     MiniCssExtractPlugin: MiniCssExtractPlugin,
     StyleLintPlugin: StyleLintPlugin,
-    HtmlPlugin: HtmlPlugin
+    HtmlPlugin: HtmlPlugin,
+    TerserPlugin: TerserPlugin
 };

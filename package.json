@@ -10,7 +10,7 @@
   "pre-commit": "lint-staged",
   "scripts": {
     "build": "webpack -p --config ./webpack/webpack.config.js --display-error-details",
-    "watch": "webpack-dev-server --watch --open --config ./webpack/webpack.config.js --display-error-details",
+    "watch": "webpack-dev-server -d --watch --open --config ./webpack/webpack.config.js --display-error-details",
     "lint-staged": "lint-staged"
   },
   "keywords": [],
@@ -40,6 +40,7 @@
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
     "stylelint-webpack-plugin": "^0.10.5",
+    "terser-webpack-plugin": "^1.3.0",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
