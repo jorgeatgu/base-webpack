@@ -11,6 +11,6 @@ module.exports = {
             browsers: 'last 2 versions',
             forceImport: true
         },
-        'cssnano': {}
+        cssnano: {}
     }
 };

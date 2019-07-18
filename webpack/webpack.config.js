@@ -7,7 +7,7 @@ module.exports = {
     module: {
         rules: [loaders.CSSLoader, loaders.JSLoader, loaders.ESLintLoader, loaders.HtmlLoader]
     },
-    plugins: [plugins.StyleLintPlugin, plugins.MiniCssExtractPlugin, plugins.HtmlPlugin],
+    plugins: [plugins.StyleLintPlugin, plugins.MiniCssExtractPlugin, plugins.HtmlPlugin, plugins.PrettierPlugin],
     output: {
         path: path.resolve('public'),
         filename: 'js/[name].bundle.js'

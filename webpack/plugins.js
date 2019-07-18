@@ -3,6 +3,7 @@ const _MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const _StyleLintPlugin = require('stylelint-webpack-plugin');
 const _HtmlPlugin = require('html-webpack-plugin');
 const _TerserPlugin = require('terser-webpack-plugin');
+const _PrettierPlugin = require('prettier-webpack-plugin');
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
     filename: 'css/[name].bundle.css',
@@ -25,9 +26,18 @@ const HtmlPlugin = new _HtmlPlugin({
 
 const TerserPlugin = new _TerserPlugin({});
 
+const PrettierPlugin = new _PrettierPlugin({
+    trailingComma: 'none',
+    tabWidth: 4,
+    semi: true,
+    singleQuote: true,
+    arrowParens: 'always'
+});
+
 module.exports = {
     MiniCssExtractPlugin: MiniCssExtractPlugin,
     StyleLintPlugin: StyleLintPlugin,
     HtmlPlugin: HtmlPlugin,
-    TerserPlugin: TerserPlugin
+    TerserPlugin: TerserPlugin,
+    PrettierPlugin: PrettierPlugin
 };
