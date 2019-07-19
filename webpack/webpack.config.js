@@ -3,14 +3,14 @@ const loaders = require('./loaders');
 const plugins = require('./plugins');
 
 module.exports = {
-    entry: ['./src/js/app.js'],
+    entry: ['./src/app.js'],
     module: {
         rules: [loaders.CSSLoader, loaders.JSLoader, loaders.ESLintLoader, loaders.HtmlLoader]
     },
     plugins: [plugins.StyleLintPlugin, plugins.MiniCssExtractPlugin, plugins.HtmlPlugin, plugins.PrettierPlugin],
     output: {
         path: path.resolve('public'),
-        filename: 'js/[name].bundle.js'
+        filename: '[name].bundle.js'
     },
     stats: {
         entrypoints: false,

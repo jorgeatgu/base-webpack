@@ -6,13 +6,13 @@ const _TerserPlugin = require('terser-webpack-plugin');
 const _PrettierPlugin = require('prettier-webpack-plugin');
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
-    filename: 'css/[name].bundle.css',
+    filename: '[name].bundle.css',
     chunkFilename: '[id].css'
 });
 
 const StyleLintPlugin = new _StyleLintPlugin({
     configFile: path.resolve(__dirname, 'stylelint.config.js'),
-    context: path.resolve(__dirname, '../src/css'),
+    context: path.resolve(__dirname, '../src/'),
     files: '**/*.css',
     failOnError: false,
     quiet: false
