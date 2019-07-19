@@ -3,24 +3,22 @@ const loaders = require('./loaders');
 const plugins = require('./plugins');
 
 module.exports = {
-    entry: ['./src/app.js'],
+    entry: './src/index.js',
     module: {
-        rules: [loaders.CSSLoader, loaders.JSLoader, loaders.ESLintLoader, loaders.HtmlLoader]
+        rules: [loaders.CSSLoaderProduction, loaders.JSLoader, loaders.ESLintLoader, loaders.HtmlLoader]
     },
     plugins: [plugins.StyleLintPlugin, plugins.MiniCssExtractPlugin, plugins.HtmlPlugin, plugins.PrettierPlugin],
     output: {
-        path: path.resolve('public'),
-        filename: '[name].bundle.js'
+        path: path.resolve(__dirname, '../dist'),
+        filename: 'js/bundle.js'
     },
     stats: {
         entrypoints: false,
         children: false
     },
     devServer: {
-        contentBase: path.resolve('public'),
-        compress: true,
-        open: true,
-        port: 9000
+        hot: true,
+        open: true
     },
     optimization: {
         minimizer: [plugins.TerserPlugin],

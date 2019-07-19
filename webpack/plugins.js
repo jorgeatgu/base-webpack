@@ -6,7 +6,7 @@ const _TerserPlugin = require('terser-webpack-plugin');
 const _PrettierPlugin = require('prettier-webpack-plugin');
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
-    filename: '[name].bundle.css',
+    filename: 'css/bundle.css',
     chunkFilename: '[id].css'
 });
 
@@ -20,8 +20,7 @@ const StyleLintPlugin = new _StyleLintPlugin({
 
 const HtmlPlugin = new _HtmlPlugin({
     hash: true,
-    template: path.resolve(__dirname, '../src', 'index.html'),
-    filename: path.resolve(__dirname, '../public', 'index.html')
+    template: './src/index.html'
 });
 
 const TerserPlugin = new _TerserPlugin({});

@@ -1,12 +1,12 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const JSLoader = {
-    test: /\.js$/,
+    test: /\.(js|jsx)$/,
     exclude: /node_modules/,
     use: {
         loader: 'babel-loader',
         options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/env', '@babel/react']
         }
     }
 };
@@ -22,19 +22,48 @@ const ESLintLoader = {
     }
 };
 
-const CSSLoader = {
+const CSSLoaderProduction = {
     test: /\.css$/,
     exclude: /node_modules/,
     use: [
         {
             loader: MiniCssExtractPlugin.loader,
             options: {
-                publicPath: __dirname + '/../../public/css/'
+                hmr: process.env.NODE_ENV === 'development',
+                reloadAll: true
             }
         },
         {
             loader: 'css-loader',
-            options: { importLoaders: 1 }
+            options: {
+                sourceMap: true,
+                importLoaders: 1
+            }
+        },
+        {
+            loader: 'postcss-loader',
+            options: {
+                config: {
+                    path: __dirname + '/postcss.config.js'
+                }
+            }
+        }
+    ]
+};
+
+const CSSLoader = {
+    test: /\.css$/,
+    exclude: /node_modules/,
+    use: [
+        {
+            loader: 'style-loader'
+        },
+        {
+            loader: 'css-loader',
+            options: {
+                sourceMap: true,
+                importLoaders: 1
+            }
         },
         {
             loader: 'postcss-loader',
@@ -58,5 +87,6 @@ module.exports = {
     JSLoader: JSLoader,
     ESLintLoader: ESLintLoader,
     CSSLoader: CSSLoader,
+    CSSLoaderProduction: CSSLoaderProduction,
     HtmlLoader: HtmlLoader
 };

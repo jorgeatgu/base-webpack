@@ -1,0 +1,13 @@
+body {
+    width: 100%;
+    font-size: 2rem;
+    p {
+        color: red !important;
+    }
+}
+
+h1 {
+    color: black;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+}
