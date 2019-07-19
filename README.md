@@ -1,6 +1,8 @@
 # Base Webpack
 
-Base is inspired by this [article](https://medium.com/@jontorrado/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2), written by [Jon Torrado](https://twitter.com/jontorrado).
+Base is inspired by this [article](https://medium.com/@jontorrado/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2), written by [Jon Torrado](https://twitter.com/jontorrado). 
+
+**It's prepared for working with React.**
 
 **CSS**
   * PostCSS
