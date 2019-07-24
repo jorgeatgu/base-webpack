@@ -4,6 +4,12 @@ const _StyleLintPlugin = require('stylelint-webpack-plugin');
 const _HtmlPlugin = require('html-webpack-plugin');
 const _TerserPlugin = require('terser-webpack-plugin');
 const _PrettierPlugin = require('prettier-webpack-plugin');
+const _WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+
+const WebpackBuildNotifierPlugin = new _WebpackBuildNotifierPlugin({
+    title: 'WebPack Project',
+    suppressSuccess: true
+});
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
     filename: 'css/bundle.css',
@@ -34,6 +40,7 @@ const PrettierPlugin = new _PrettierPlugin({
 });
 
 module.exports = {
+    WebpackBuildNotifierPlugin: WebpackBuildNotifierPlugin,
     MiniCssExtractPlugin: MiniCssExtractPlugin,
     StyleLintPlugin: StyleLintPlugin,
     HtmlPlugin: HtmlPlugin,

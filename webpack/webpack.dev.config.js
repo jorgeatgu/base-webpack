@@ -7,7 +7,7 @@ module.exports = {
     module: {
         rules: [loaders.CSSLoader, loaders.JSLoader, loaders.ESLintLoader, loaders.HtmlLoader]
     },
-    plugins: [plugins.StyleLintPlugin, plugins.HtmlPlugin, plugins.PrettierPlugin],
+    plugins: [plugins.StyleLintPlugin, plugins.HtmlPlugin, plugins.WebpackBuildNotifierPlugin],
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'js/bundle.js'

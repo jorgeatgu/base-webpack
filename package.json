@@ -9,8 +9,8 @@
   },
   "pre-commit": "lint-staged",
   "scripts": {
-    "build": "webpack -p --config ./webpack/webpack.build.config.js --mode production",
-    "start": "webpack-dev-server --content-base src --hot --inline --config ./webpack/webpack.dev.config.js --mode development",
+    "build": "webpack -p --config ./webpack/webpack.build.config.js --mode production ",
+    "start": "webpack-dev-server --hot --config ./webpack/webpack.dev.config.js --mode development --bail",
     "lint-staged": "lint-staged"
   },
   "keywords": [],
@@ -18,7 +18,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.5.4",
-    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
@@ -50,6 +49,7 @@
     "stylelint": "^10.1.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "webpack": "^4.36.1",
+    "webpack-build-notifier": "^1.0.3",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
   },
