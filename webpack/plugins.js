@@ -17,7 +17,7 @@ const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
 });
 
 const StyleLintPlugin = new _StyleLintPlugin({
-    configFile: path.resolve(__dirname, 'stylelint.config.js'),
+    configFile: path.resolve('.stylelintrc'),
     context: path.resolve(__dirname, '../src/'),
     files: '**/*.css',
     failOnError: false,

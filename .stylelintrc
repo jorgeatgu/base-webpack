@@ -1,4 +1,4 @@
-module.exports = {
+{
     "rules": {
         "at-rule-empty-line-before": ["always", {
             except: ["blockless-after-same-name-blockless", "first-nested"],
@@ -38,7 +38,7 @@ module.exports = {
             message: "Que menos que dar un poco de separación a ese !important del averno"
         }],
         "declaration-block-no-duplicate-properties": [true, {
-            message: "Propiedades repetidas. Seguro que has copiado y pegado de algún sitio."
+          message: "Propiedades repetidas. Seguro que has copiado y pegado de algún sitio."
         }],
         "declaration-block-no-shorthand-property-overrides": [true, {
             message: "El shorthand en primer lugar. Ejemplo .foo { margin: 10px; margin-right: 5px; }"
